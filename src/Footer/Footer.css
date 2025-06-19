@@ -1,0 +1,75 @@
+/* From Uiverse.io by andrew-demchenk0 */ 
+.pyramid-loader {
+  position: relative;
+  width: 100px;
+  height: 50px;
+margin-bottom: 20px;
+  left: 50px;
+  
+  display: block;
+  transform-style: preserve-3d;
+  transform: rotateX(-20deg);
+}
+
+.wrapper {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: spin 4s linear infinite;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+.pyramid-loader .wrapper .side {
+      width: 56px;
+    height: 54px;
+/* you can choose any gradient or color you want */
+  /* background: radial-gradient( #2F2585 10%, #F028FD 70%, #2BDEAC 120%); */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform-origin: center top;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.pyramid-loader .wrapper .side1 {
+  transform: rotateZ(-30deg) rotateY(90deg);
+  background: conic-gradient( #1eff00, #068827, #13ce74, #3caa29);
+}
+
+.pyramid-loader .wrapper .side2 {
+  transform: rotateZ(30deg) rotateY(90deg);
+  background: conic-gradient( #26ff00, #0ae30e, #2ed20a, #09ce19);
+}
+
+.pyramid-loader .wrapper .side3 {
+  transform: rotateX(30deg);
+  background: conic-gradient( #13762a, #239958, #16c650, #46d807);
+}
+
+.pyramid-loader .wrapper .side4 {
+  transform: rotateX(-30deg);
+  background: conic-gradient( #068827, #3caa29, #09ce19, #46d807);
+}
+
+.pyramid-loader .wrapper .shadow {
+  width: 60px;
+  height: 60px;
+  background: #86eb03;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  transform: rotateX(90deg) translateZ(-40px);
+  filter: blur(12px);
+}

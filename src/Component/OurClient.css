@@ -1,0 +1,89 @@
+/* Root variables for consistent styling */
+
+  
+  
+  
+  /* Main container for the client logos */
+  .ourclient-container {
+    width: 94%;
+    height: 16vh; /* Height adjusted for better display */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+   
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Adding a subtle shadow */
+    padding: 0 20px;
+    
+  }
+  
+  /* Container that holds the logos with infinite scrolling */
+  .ourclient {
+    display: flex;
+    animation: scroll-left 20s linear infinite; /* Slower scroll speed for smooth transition */
+    width: fit-content;
+    position: absolute;
+    
+    
+  }
+  
+  /* Styling each logo within the container */
+  .client-logo {
+    height: 6vh; /* Adjust logo height */
+    margin: 0 10px; /* Added more margin for spacing */
+    transition: transform 0.3s ease-in-out, filter 2.3s ease-in-out;
+    filter: brightness(2.9); /* Dim the logos by default */
+    padding: 8px;
+   
+  }
+  
+  /* Hover effect to enlarge and brighten the logos */
+  .client-logo:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2); /* Brighter effect on hover */
+  }
+  
+  /* Keyframe for scrolling the logos continuously */
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0); /* Start at the initial position */
+    }
+    100% {
+      transform: translateX(-50%); /* Move by 50% to enable continuous scrolling */
+    }
+  }
+  
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .ourclient-container {
+      height: 12vh;
+      width: 94%; /* Slightly adjust width for better responsiveness */
+    }
+  
+    .client-logo {
+      height: 8vh; /* Smaller logo size for smaller screens */
+    }
+  
+    .ourclient {
+      animation: scroll-left 7s linear infinite; /* Slower scroll speed for smaller screens */
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* Additional responsiveness for very small screens */
+  @media (max-width: 480px) {
+    
+  
+    .ourclient-container {
+      height: 10vh; /* Smaller container height */
+    }
+  
+    .client-logo {
+      height: 10vh; /* Even smaller logos for small devices */
+    }
+  }
+  .clients-slider {
+    height: auto; /* या कोई fixed height जैसे 120px */
+    overflow: visible;
+}
